@@ -1,5 +1,6 @@
 import React from 'react';
 import bridge from '@vkontakte/vk-bridge';
+import SafeImage from "./SafeImage";
 import {
     Avatar,
     Button,
@@ -81,7 +82,8 @@ class App extends React.Component {
 						{
 							!!image &&
 							<Div style={{ textAlign: 'center' }}>
-                                <img src={ image } alt="remote file" />
+                                {/*<img src={ image } alt="remote file" /> this is going to send referer*/}
+                                <SafeImage src={ image } alt={"remote file"}/> {/*Safe and easy just wrap this*/}
 							</Div>
 						}
                     </Group>
